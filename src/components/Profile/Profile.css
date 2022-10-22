@@ -1,0 +1,140 @@
+.profile {
+    background-color: #202020;
+    padding: 70px 30px 40px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.profile__form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 410px;
+}
+
+.profile__title {
+    font-family: 'Inter', Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFF;
+    margin: 0 0 80px;
+    text-align: center;
+}
+
+.profile__form-wrapper {
+    margin-top: 0;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #424242;
+    margin-bottom: 17px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile__form-wrapper:last-of-type {
+    border: none;
+}
+
+.profile__label {
+    font-family: 'Inter', Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    color: #FFF;
+    width: 50%;
+}
+
+.profile__input {
+    font-family: 'Inter', Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #FFF;
+    border: none;
+    background-color: transparent;
+    text-align: right;
+    width: 50%;
+}
+
+.profile__button-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.profile__edit-button {
+    font-family: 'Inter', Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFF;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.profile__edit-button:hover {
+    opacity: 0.5;
+}
+
+.profile__exit-button {
+    font-family: 'Inter', Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #EE3465;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.profile__exit-button:hover {
+    opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) {
+    .profile {
+        padding-top: 236px;
+    }
+
+    .profile__title {
+        margin-bottom: 97px;
+    }
+
+    .profile__button-wrapper {
+        margin-top: 175px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .profile {
+        padding-top: 74px;
+    }
+
+    .profile__title {
+        margin-bottom: 120px;
+    }
+
+    .profile__button-wrapper {
+        margin-top: 185px;
+    }
+
+    .profile__edit-button {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .profile__exit-button {
+        font-size: 13px;
+        line-height: 16px;
+    }
+}

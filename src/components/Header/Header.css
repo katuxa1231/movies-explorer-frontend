@@ -1,0 +1,133 @@
+.header {
+    background-color: #202020;
+    padding: 16px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 44px;
+}
+
+.header__nav-link-wrapper {
+    display: none;
+}
+
+.header__auth-link-wrapper {
+    display: flex;
+    margin-left: auto;
+}
+
+.header__auth-link {
+    font-family: 'Inter', Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 12px;
+    background-color: #3DDC84;
+    border-radius: 3px;
+}
+
+.header__auth-link_color_transparent {
+    color: #FFF;
+    background-color: transparent;
+}
+
+.header__menu-button {
+    width: 40px;
+    height: 43px;
+    border: none;
+    background: url(../../images/burger-icon.svg) no-repeat center;
+    cursor: pointer;
+}
+
+.header__menu-button:hover {
+    opacity: 0.5;
+}
+
+.header__profile-link {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .header{
+        padding: 16px 30px;
+    }
+
+    .header__auth-link {
+        font-size: 12px;
+        padding: 8px 20px;
+    }
+
+    .header__auth-link-wrapper {
+        gap: 10px;
+    }
+
+    .header__menu-button {
+        width: 44px;
+        height: 41px;
+        padding: 0;
+        background-size: 44px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .header{
+        padding: 18px 70px;
+    }
+
+    .header__nav-link-wrapper {
+        list-style: none;
+        margin: 0 auto 0 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .header__nav-link {
+        font-family: 'Inter', Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        text-decoration: none;
+        color: #FFF;
+        margin-right: 16px;
+    }
+
+    .header__nav-link_active {
+        font-weight: 500;
+    }
+
+    .header__nav-link:hover {
+        opacity: 0.5;
+    }
+
+    .header__menu-button {
+        display: none;
+    }
+
+    .header__profile-link {
+        display: block;
+        font-family: 'Inter', Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFF;
+        text-decoration: none;
+        padding: 8px 22px;
+        background-color: #313131;
+        border-radius: 20px;
+    }
+
+    .header__profile-link:hover {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+}
