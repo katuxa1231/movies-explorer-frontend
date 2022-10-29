@@ -54,6 +54,7 @@ export const FILTER_STORAGE_KEY = 'filter_movies'
 export const SHORT_FILM_STORAGE_KEY = 'is_short_film'
 export const TOAST_DELETE_TIME = 3000
 
-// export const MAIN_BASE_URL = 'https://api.movies-explorer.nomoredomains.icu';
-export const MAIN_BASE_URL = 'http://localhost:3300';
+// For local development
+// export const MAIN_BASE_URL = 'http://localhost:3300';
+export const MAIN_BASE_URL = 'https://api.movies-explorer.nomoredomains.icu';
 export const MOVIES_BASE_URL = 'https://api.nomoreparties.co';
