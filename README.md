@@ -13,3 +13,5 @@
 + React
 
 Ссылка на макет: https://disk.yandex.ru/d/5QAj9jC4I-QhYg
+Ссылка на сайт: https://movies-info.nomoredomains.icu
+Ссылка на пулл-реквест: https://github.com/katuxa1231/movies-explorer-frontend/pull/2

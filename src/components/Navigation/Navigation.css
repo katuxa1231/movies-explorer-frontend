@@ -16,7 +16,7 @@
 }
 
 .side-nav__close-button {
-    background: url(../../images/deleteButton.svg) no-repeat center;
+    background: url(../../images/delete-icon.svg) no-repeat center;
     background-size: 22px;
     width: 22px;
     height: 22px;

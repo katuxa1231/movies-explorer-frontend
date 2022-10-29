@@ -75,20 +75,11 @@
 }
 
 .form__input_type_error {
-    font-family: 'Inter', Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
     color: #EE3465;
 }
 
 .form__input_type_error:focus {
     border-bottom-color: #EE3465;
-}
-
-.form__input-error_active {
-    visibility: visible;
 }
 
 .form__input-error {
