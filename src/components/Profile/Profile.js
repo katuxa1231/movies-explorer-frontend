@@ -25,7 +25,7 @@ function Profile({onLogout, onProfileUpdate}) {
         <p className="profile__form-wrapper">
           <label className="profile__label" htmlFor="name">Имя</label>
           <input className={`profile__input ${errors.name && 'profile__input_type_error'}`} id="name" name="name" type="text" value={values.name}
-                 onChange={handleChange} minLength={2} maxLength={30} required={true} pattern="^[A-Za-zА-Яа-яЁё/s-]+$"/>
+                 onChange={handleChange} minLength={2} maxLength={30} required={true} pattern="^[A-Za-zА-Яа-яЁё -]+$"/>
         </p>
         <p className="profile__form-wrapper">
           <label className="profile__label" htmlFor="email">E-mail</label>

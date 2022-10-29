@@ -24,8 +24,10 @@ function Register({ onRegister }) {
         <form onSubmit={handleSubmit} className="form">
           <div className="form__input-wrapper">
             <label className="form__label" htmlFor="name">Имя</label>
-            <input className={`form__input ${errors.name && 'form__input_type_error'}`} id="name" name="name" type="text" value={values.name}
-                   onChange={handleChange} minLength={2} maxLength={30} required={true} pattern="^[A-Za-zА-Яа-яЁё/s-]+$"/>
+            <input className={`form__input ${errors.name && 'form__input_type_error'}`} id="name" name="name"
+                   type="text" value={values.name}
+                   onChange={handleChange} minLength={2} maxLength={30} required={true}
+                   pattern="^[A-Za-zА-Яа-яЁё -]+$"/>
             {errors.name ? <span className="form__input-error">{errors.name}</span> : null}          </div>
           <div className="form__input-wrapper">
             <label className="form__label" htmlFor="email">E-mail</label>
@@ -36,7 +38,8 @@ function Register({ onRegister }) {
           </div>
           <div className="form__input-wrapper">
             <label className="form__label" htmlFor="password">Пароль</label>
-            <input className={`form__input ${errors.password && 'form__input_type_error'}`} id="password" name="password"
+            <input className={`form__input ${errors.password && 'form__input_type_error'}`} id="password"
+                   name="password"
                    type="password" value={values.password} onChange={handleChange} required={true}/>
             {errors.password ? <span className="form__input-error">{errors.password}</span> : null}
           </div>
