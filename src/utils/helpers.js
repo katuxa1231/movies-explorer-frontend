@@ -1,4 +1,14 @@
-import { L_SCREEN_SIZE, M_SCREEN_SIZE, MOVIES_BASE_URL, SHORT_MOVIE_DURATION } from './constants';
+import { v4 as uuidv4 } from 'uuid';
+
+import {
+  FILTER_STORAGE_KEY,
+  L_SCREEN_SIZE,
+  M_SCREEN_SIZE,
+  MOVIES_BASE_URL,
+  MOVIES_STORAGE_KEY, SHORT_FILM_STORAGE_KEY,
+  SHORT_MOVIE_DURATION, toastTitle, USER_STORAGE_KEY
+} from './constants';
+import { moviesStorage } from './MoviesStorage';
 
 export function getMoviesCount(width) {
   if (width < M_SCREEN_SIZE) {
@@ -54,4 +64,22 @@ export function toMainApiMovieModel(movie) {
 
 export function getStorageKey(key, userId) {
   return `${key}_${userId}`
+}
+
+export function clearStorageForUser(userId) {
+  moviesStorage.clearData([
+    getStorageKey(MOVIES_STORAGE_KEY, userId),
+    getStorageKey(FILTER_STORAGE_KEY, userId),
+    getStorageKey(SHORT_FILM_STORAGE_KEY, userId),
+    USER_STORAGE_KEY
+  ])
+}
+
+export function createToast(type, message, title = '') {
+  return {
+    id: uuidv4(),
+    type,
+    message,
+    title: title || toastTitle[type],
+  }
 }

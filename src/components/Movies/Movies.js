@@ -26,7 +26,7 @@ function Movies() {
 
   useEffect(() => {
     setLoadingStatus(true)
-    Promise.all([filterValue ? Promise.resolve(localMovies) : moviesApi.getMovies(), mainApi.getMovies()])
+    Promise.all([filterValue ? Promise.resolve(localMovies) : getMovies(), mainApi.getMovies()])
       .then(([movies, savedMovies]) => {
         setFavoriteMoviesIds(savedMovies.map((movie) => movie.movieId))
         if (filterValue) {
@@ -69,7 +69,7 @@ function Movies() {
   }
 
   function handleCheckboxChange(filterValue, isShortFilm) {
-    const filteredMovies = filterMovies(localMovies, filterValue, isShortFilm)
+    const filteredMovies = filterMovies(localMovies.length ? localMovies : moviesStorage.allMovies, filterValue, isShortFilm)
     setFilteredMovies(filteredMovies)
     saveShortFilmValue(isShortFilm)
   }
@@ -78,7 +78,7 @@ function Movies() {
     getMovies().then((movies) => {
       const filteredMovies = filterMovies(movies, filterValue, isShortFilm)
       setFilteredMovies(filteredMovies)
-      saveMoviesData(filteredMovies)
+      filterValue ? saveMoviesData(filteredMovies) : saveMoviesData([])
       saveFilterValue(filterValue)
     }).catch((err) => console.log(`Error: ${err.status}`))
   }

@@ -20,7 +20,7 @@ function Profile({onLogout, onProfileUpdate}) {
 
   return (
     <section className="profile">
-      <h2 className="profile__title">Привет, Виталий!</h2>
+      <h2 className="profile__title">Привет, {currentUser.name}!</h2>
       <form className="profile__form" onSubmit={handleFormSubmit}>
         <p className="profile__form-wrapper">
           <label className="profile__label" htmlFor="name">Имя</label>
@@ -34,8 +34,8 @@ function Profile({onLogout, onProfileUpdate}) {
                  onChange={handleChange}/>
         </p>
         <div className="profile__button-wrapper">
-          <button className="profile__edit-button" disabled={!isValid || !isDataChanged()}>Редактировать</button>
-          <button className="profile__exit-button" onClick={onLogout}>Выйти из аккаунта</button>
+          <button className="profile__edit-button" disabled={!isValid || !isDataChanged()} type="submit">Редактировать</button>
+          <button className="profile__exit-button" onClick={onLogout} type='button'>Выйти из аккаунта</button>
         </div>
       </form>
     </section>

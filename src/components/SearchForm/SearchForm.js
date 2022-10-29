@@ -17,7 +17,7 @@ function SearchForm({onSearch, onShortFilmChange, filterValue, isShortFilm}) {
       <form className="search-form" onSubmit={handleSubmit}>
         <div className="search-form__wrapper">
           <input className="search-form__input" name="name" type="text" placeholder="Фильм" value={values.name} onChange={handleChange}/>
-          <button className="search-form__submit-button">Найти</button>
+          <button className="search-form__submit-button" type="submit">Найти</button>
         </div>
         <FilterCheckbox value={values.shortFilm} onChangeValue={handleChangeShortFilmsCheckbox}></FilterCheckbox>
       </form>

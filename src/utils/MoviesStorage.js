@@ -11,6 +11,10 @@ export class MoviesStorage {
     return JSON.parse(localStorage.getItem(key))
   }
 
+  clearData(keys) {
+    keys.forEach((key) => (localStorage.removeItem(key)))
+  }
+
   get allMovies() {
     return this._allMovies
   }
